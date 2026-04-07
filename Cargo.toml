@@ -4,3 +4,6 @@ members = [
   "mclauncher-core",
   "mclauncher"
 ]
+
+[patch.crates-io]
+native-windows-gui = { path = "vendor/native-windows-gui" }

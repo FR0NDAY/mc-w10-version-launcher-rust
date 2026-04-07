@@ -17,7 +17,7 @@ This tool will **not** help you to pirate the game; it requires that you have a 
 
 ## Build and Run
 - `cargo run -p mclauncher`
-- `build-release.bat` (release EXE)
+- `build-release.bat` (release EXE, static CRT, output to `dist\mclauncher.exe`)
 
 See `RUST_PORT.md` for details and limitations.
 

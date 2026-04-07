@@ -13,10 +13,11 @@ set "RUSTFLAGS=%RUSTFLAGS% -C target-feature=+crt-static"
 cargo build -p mclauncher --release
 if errorlevel 1 exit /b %errorlevel%
 
-if exist "%CD%\\mclauncher\\mclauncher.manifest" (
-  copy /y "%CD%\\mclauncher\\mclauncher.manifest" "%CD%\\target\\release\\mclauncher.exe.manifest" >nul
+if not exist "%CD%\\dist" (
+  mkdir "%CD%\\dist"
 )
+copy /y "%CD%\\target\\release\\mclauncher.exe" "%CD%\\dist\\mclauncher.exe" >nul
 
 echo.
 echo Build complete.
-echo Output: %CD%\target\release\mclauncher.exe
+echo Output: %CD%\dist\mclauncher.exe
