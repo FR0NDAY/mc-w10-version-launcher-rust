@@ -8,6 +8,8 @@ if errorlevel 1 (
 )
 
 echo Building release...
+rem Build with a static CRT to avoid VC++ Redistributable dependency.
+set "RUSTFLAGS=%RUSTFLAGS% -C target-feature=+crt-static"
 cargo build -p mclauncher --release
 if errorlevel 1 exit /b %errorlevel%
 
