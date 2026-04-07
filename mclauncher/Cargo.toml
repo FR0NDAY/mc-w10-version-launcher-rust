@@ -1,0 +1,15 @@
+[package]
+name = "mclauncher"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+mclauncher-core = { path = "../mclauncher-core" }
+native-windows-gui = { version = "1.0", features = ["tabs"] }
+native-windows-derive = "1.0"
+tokio = { version = "1", features = ["rt-multi-thread"] }
+windows = { version = "0.58", features = ["Foundation", "Foundation_Collections", "Management_Deployment", "ApplicationModel", "Storage", "Win32_Foundation", "Win32_System_Services", "Win32_System_WinRT"] }
+winreg = "0.52"
+
+[build-dependencies]
+embed-resource = "3.0"
